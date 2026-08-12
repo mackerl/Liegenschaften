@@ -4,214 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ackerl Liegenschaften GmbH</title>
-
-<style>
-    :root {
-        --primary: #2e7d32;
-        --primary-dark: #1f3d2b;
-        --text: #222;
-        --bg: #f7f7f7;
-    }
-
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-    }
-
-    /* --- Navigation --- */
-    nav {
-        background: var(--primary-dark);
-        color: #fff;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .nav-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 12px 25px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-logo {
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 25px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav-links a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        transition: opacity 0.3s ease;
-    }
-
-    .nav-links a:hover {
-        opacity: 0.7;
-    }
-
-    /* --- Burger Menu --- */
-    .burger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
-
-    .burger div {
-        width: 25px;
-        height: 3px;
-        background: #fff;
-    }
-
-    @media (max-width: 768px) {
-        .nav-links {
-            position: absolute;
-            top: 60px;
-            right: 0;
-            background: var(--primary-dark);
-            flex-direction: column;
-            width: 100%;
-            display: none;
-            padding: 20px 0;
-            text-align: center;
-            gap: 20px;
-        }
-
-        .nav-links.open {
-            display: flex;
-        }
-
-        .burger {
-            display: flex;
-        }
-    }
-
-    /* --- Header --- */
-    header {
-        background: linear-gradient(180deg, #1f3d2b 0%, #2e7d32 100%);
-        color: #f1f1f1;
-        padding: 70px 20px;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .logo {
-        height: 100px;
-        margin-bottom: 30px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    header h1 {
-        margin: 0;
-        font-size: 2.6rem;
-        letter-spacing: 0.5px;
-    }
-
-    header p {
-        margin-top: 12px;
-        font-size: 1.25rem;
-        opacity: 0.9;
-    }
-
-    /* --- Hauptbereich --- */
-    section {
-        max-width: 1000px;
-        margin: 60px auto;
-        padding: 0 25px;
-        line-height: 1.8;
-    }
-
-    h2 {
-        color: var(--primary-dark);
-        margin-top: 50px;
-        font-size: 1.6rem;
-        border-left: 4px solid var(--primary);
-        padding-left: 12px;
-        text-shadow: 0 1px 0 rgba(255,255,255,0.6);
-    }
-
-    ul {
-        margin-top: 10px;
-        padding-left: 20px;
-    }
-
-    /* --- Kontaktformular --- */
-    .contact-form {
-        max-width: 600px;
-        margin-top: 25px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 1rem;
-        font-family: inherit;
-        background: #fff;
-    }
-
-    .contact-form button {
-        background: var(--primary);
-        color: #fff;
-        border: none;
-        padding: 14px 20px;
-        font-size: 1.1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    .contact-form button:hover {
-        background: var(--primary-dark);
-    }
-
-    .form-hint {
-        font-size: 0.85rem;
-        opacity: 0.7;
-        margin-top: 10px;
-    }
-
-    /* --- Footer --- */
-    footer {
-        background: var(--primary-dark);
-        color: #f1f1f1;
-        text-align: center;
-        padding: 25px;
-        margin-top: 70px;
-        font-size: 0.95rem;
-        border-top: 2px solid #2e7d32;
-    }
-
-    footer a {
-        color: #fff;
-        text-decoration: underline;
-        margin: 0 8px;
-    }
-</style>
-
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
 
 <body>
@@ -224,6 +17,7 @@
         <ul class="nav-links" id="nav-links">
             <li><a href="#ueber-uns">Über uns</a></li>
             <li><a href="#leistungen">Leistungen</a></li>
+            <li><a href="#objekte">Objekte</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -260,6 +54,41 @@
         <li>Beteiligung an Immobilienprojekten</li>
     </ul>
 
+    <h2 id="objekte">Unsere Objekte</h2>
+
+<div class="object-grid">
+
+    <!-- Objekt Ilz 310 -->
+    <div class="object-card">
+        <div class="object-image">
+            <img src="assets/images/ilz310.jpg" alt="Objekt Ilz 310">
+        </div>
+        <h3>Ilz 310</h3>
+        <ul>
+            <li>Standort: Ilz, Steiermark</li>
+            <li>Nutzung: Wohnobjekt</li>
+            <li>Status: Bestand</li>
+            <li>Einheiten: 2 Wohneinheiten</li>
+        </ul>
+    </div>
+
+    <!-- Objekt Ilz 330 -->
+    <div class="object-card">
+        <div class="object-image">
+            <img src="assets/images/ilz330.jpg" alt="Objekt Ilz 330">
+        </div>
+        <h3>Ilz 330</h3>
+        <ul>
+            <li>Standort: Ilz, Steiermark</li>
+            <li>Nutzung: Wohnobjekt</li>
+            <li>Status: Bestand</li>
+            <li>Einheiten: 3 Wohneinheiten</li>
+        </ul>
+    </div>
+
+</div>
+
+
     <h2 id="kontakt">Kontakt</h2>
     <div class="contact-block">
         Ackerl Liegenschaften GmbH<br>
@@ -291,7 +120,7 @@
     <input type="text" name="_gotcha" style="display:none">
 
     <button type="submit">Nachricht senden</button>
-    <input type="hidden" name="_redirect" value="https://ackerl-liegenschaften.github.io/danke.html">
+    <input type="hidden" name="_redirect" value="https://liegenschaften.familie-ackerl.at/danke.html">
 </form>
 
 <p class="form-hint">
