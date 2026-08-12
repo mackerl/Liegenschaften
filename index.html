@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ackerl Liegenschaften GmbH</title>
+
     <style>
         :root {
-            --primary: #1f3d2b;
+            --primary: #2e7d32;      /* Modernes frisches Grün passend zum Logo */
+            --primary-dark: #1f3d2b; /* Dein ursprüngliches, bodenständiges Grün */
             --text: #222;
             --bg: #f7f7f7;
         }
@@ -19,10 +21,18 @@
         }
 
         header {
-            background: var(--primary);
+            background: var(--primary-dark);
             color: white;
-            padding: 70px 20px;
+            padding: 60px 20px;
             text-align: center;
+        }
+
+        .logo {
+            height: 90px;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         header h1 {
@@ -45,7 +55,7 @@
         }
 
         h2 {
-            color: var(--primary);
+            color: var(--primary-dark);
             margin-top: 50px;
             font-size: 1.6rem;
             border-left: 4px solid var(--primary);
@@ -58,7 +68,7 @@
         }
 
         footer {
-            background: var(--primary);
+            background: var(--primary-dark);
             color: white;
             text-align: center;
             padding: 25px;
@@ -92,6 +102,7 @@
 <body>
 
 <header>
+    <img src="assets/images/logo.png" alt="Ackerl Liegenschaften GmbH Logo" class="logo">
     <h1>Ackerl Liegenschaften GmbH</h1>
     <p>Regionale Immobilien. Langfristig gedacht. Verlässlich verwaltet.</p>
 </header>
