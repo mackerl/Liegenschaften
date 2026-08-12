@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ackerl Liegenschaften GmbH</title>
 
-  <style>
+<style>
     :root {
-        --primary: #2e7d32;      /* Modernes frisches Grün passend zum Logo */
-        --primary-dark: #1f3d2b; /* Ursprüngliches, bodenständiges Grün */
+        --primary: #2e7d32;
+        --primary-dark: #1f3d2b;
         --text: #222;
         --bg: #f7f7f7;
     }
@@ -20,7 +20,89 @@
         color: var(--text);
     }
 
-    /* --- Header mit Farbverlauf & Schatten --- */
+    /* --- Navigation --- */
+    nav {
+        background: var(--primary-dark);
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 12px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-logo {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        opacity: 0.7;
+    }
+
+    /* --- Burger Menu --- */
+    .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: var(--primary-dark);
+            flex-direction: column;
+            width: 100%;
+            display: none;
+            padding: 20px 0;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .nav-links.open {
+            display: flex;
+        }
+
+        .burger {
+            display: flex;
+        }
+    }
+
+    /* --- Header --- */
     header {
         background: linear-gradient(180deg, #1f3d2b 0%, #2e7d32 100%);
         color: #f1f1f1;
@@ -57,7 +139,6 @@
         line-height: 1.8;
     }
 
-    /* --- Überschriften mit Akzentlinie & leichtem Textschatten --- */
     h2 {
         color: var(--primary-dark);
         margin-top: 50px;
@@ -72,7 +153,48 @@
         padding-left: 20px;
     }
 
-    /* --- Footer mit Abgrenzungslinie --- */
+    /* --- Kontaktformular --- */
+    .contact-form {
+        max-width: 600px;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: inherit;
+        background: #fff;
+    }
+
+    .contact-form button {
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 14px 20px;
+        font-size: 1.1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background: var(--primary-dark);
+    }
+
+    .form-hint {
+        font-size: 0.85rem;
+        opacity: 0.7;
+        margin-top: 10px;
+    }
+
+    /* --- Footer --- */
     footer {
         background: var(--primary-dark);
         color: #f1f1f1;
@@ -83,91 +205,37 @@
         border-top: 2px solid #2e7d32;
     }
 
-    /* --- Links & Hover-Effekte --- */
-    a {
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-
-    a:hover {
-        color: var(--primary-dark);
+    footer a {
+        color: #fff;
         text-decoration: underline;
+        margin: 0 8px;
     }
-
-    .contact-block {
-        margin-top: 15px;
-        line-height: 1.8;
-    }
-
-    .company-info {
-        margin-top: 40px;
-        font-size: 0.95rem;
-        opacity: 0.8;
-    }
-
-    /* --- Responsive Anpassungen --- */
-@media (max-width: 768px) {
-    header {
-        padding: 50px 15px;
-    }
-
-    .logo {
-        height: 70px;
-        margin-bottom: 20px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    section {
-        max-width: 95%;
-        margin: 40px auto;
-        padding: 0 15px;
-        line-height: 1.6;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-        border-left: 3px solid var(--primary);
-        padding-left: 10px;
-    }
-
-    footer {
-        font-size: 0.85rem;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.7rem;
-    }
-
-    header p {
-        font-size: 0.95rem;
-    }
-
-    .logo {
-        height: 60px;
-    }
-
-    section {
-        margin: 30px auto;
-    }
-}
-
 </style>
 
 </head>
 
 <body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Ackerl Liegenschaften</a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#ueber-uns">Über uns</a></li>
+            <li><a href="#leistungen">Leistungen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+
+        <div class="burger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</nav>
 
 <header>
     <img src="assets/images/logo.png" alt="Ackerl Liegenschaften GmbH Logo" class="logo">
@@ -176,7 +244,7 @@
 </header>
 
 <section>
-    <h2>Über uns</h2>
+    <h2 id="ueber-uns">Über uns</h2>
     <p>
         Die Ackerl Liegenschaften GmbH ist ein steirisches Immobilienunternehmen mit Fokus auf den 
         langfristigen Aufbau und die nachhaltige Bewirtschaftung von Wohn- und Gewerbeimmobilien.
@@ -184,7 +252,7 @@
         von Bestandsobjekten.
     </p>
 
-    <h2>Leistungen</h2>
+    <h2 id="leistungen">Leistungen</h2>
     <ul>
         <li>Ankauf von Wohn- und Gewerbeimmobilien</li>
         <li>Vermietung & Verwaltung von Bestandsobjekten</li>
@@ -192,7 +260,7 @@
         <li>Beteiligung an Immobilienprojekten</li>
     </ul>
 
-    <h2>Kontakt</h2>
+    <h2 id="kontakt">Kontakt</h2>
     <div class="contact-block">
         Ackerl Liegenschaften GmbH<br>
         Feldbacherstraße 195<br>
@@ -202,13 +270,44 @@
         E-Mail: <a href="mailto:Liegenschaften@familie-ackerl.at">Liegenschaften@familie-ackerl.at</a>
     </div>
 
+    <h2>Kontaktformular</h2>
+
+<form action="https://formspree.io/f/mqpzblvy" method="POST" class="contact-form">
+    <label for="name">
+        Ihr Name<br>
+        <input type="text" name="name" required autocomplete="name">
+    </label>
+
+    <label for="email">
+        Ihre E-Mail<br>
+        <input type="email" name="email" required autocomplete="email" inputmode="email">
+    </label>
+
+    <label for="message">
+        Ihre Nachricht<br>
+        <textarea name="message" rows="6" required></textarea>
+    </label>
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="submit">Nachricht senden</button>
+    <input type="hidden" name="_redirect" value="https://ackerl-liegenschaften.github.io/danke.html">
+</form>
+
+<p class="form-hint">
+Mit dem Absenden des Formulars erklären Sie sich damit einverstanden, 
+dass Ihre Angaben zur Beantwortung der Anfrage gespeichert und verarbeitet werden.
+</p>
+
     <div class="company-info">
         © Ackerl Liegenschaften GmbH – Markt Hartmannsdorf
     </div>
 </section>
 
 <footer>
-    Immobilien mit Verantwortung – seit Generationen in der Region verwurzelt.
+    Immobilien mit Verantwortung – seit Generationen in der Region verwurzelt.<br><br>
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
 </footer>
 
 </body>
