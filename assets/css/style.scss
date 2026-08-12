@@ -259,3 +259,89 @@
     padding-left: 20px;
     margin-top: 10px;
 }
+
+/* --- Danke-Seite --- */
+.thankyou-container {
+    max-width: 700px;
+    margin: 120px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.thankyou-container h1 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.thankyou-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* --- Datenschutz-Seite --- */
+.privacy-container {
+    max-width: 900px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.privacy-container h1 {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.privacy-container h2 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-top: 40px;
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+}
+
+.privacy-container p {
+    margin-top: 12px;
+    font-size: 1.05rem;
+}
+
+.privacy-container a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* --- Impressum-Seite --- */
+.impressum-container {
+    max-width: 900px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+.impressum-container h1 {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.impressum-container p {
+    margin-top: 12px;
+    font-size: 1.05rem;
+}
+
+.impressum-container a {
+    color: var(--primary);
+    text-decoration: underline;
+}
